@@ -11,7 +11,7 @@ const renderApp = () => {
   const initialState = {};
   const store = configureStore(initialState);
 
-  store.dispatch({ type: "@hnClone/@@INIT" });
+  store.dispatch({ type: "@hnClone/INIT" });
 
   ReactDOM.render(
     <Provider store={store}>
