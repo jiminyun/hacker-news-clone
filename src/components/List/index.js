@@ -3,9 +3,11 @@ import ListItem from "components/ListItem";
 
 import { ListWrapper } from "./styles";
 
-const List = () => (
+const List = props => (
   <ListWrapper>
-    <ListItem />
+    {props.stories.map(story => (
+      <ListItem key={story.id} {...story} />
+    ))}
   </ListWrapper>
 );
 
